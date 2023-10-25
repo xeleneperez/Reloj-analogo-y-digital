@@ -1,0 +1,97 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+   background-image: url("/img/totoro-10.webp");
+   background-repeat:  no-repeat;
+   background: cover;
+   background-position: center;
+
+}
+.reloj{
+    width: 330px;
+    height: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 23%;
+    background-image: url("/img/R.jpeg");
+    background-size: cover;
+    border-radius: 50vh;
+    /*para poner una iluminacion*/
+    box-shadow: inset 0px 0px 20px 5px rgb(194, 183, 86);
+}
+.reloj::before{
+    content:'';
+    position:absolute;
+    width: 20px;
+    height: 20px;
+    background: #1F1300;
+    border-radius: 50vh;
+    z-index: 10000;
+}
+.hora{
+    width: 140px;
+    height: 140px;
+}
+.minuto{
+    width: 190px;
+    height: 190px;
+}
+.segundo{
+    width: 250px;
+    height: 250px;
+}
+.hora::before{
+content: '';
+position: absolute;
+width: 8px;
+height: 99px;
+background: #CC5803;
+z-index: 10;
+border-bottom: 50vh;
+}
+.minuto::before{
+content: '';
+position: absolute;
+width: 5px;
+height: 130px;
+background: #F7934C;
+z-index: 11;
+border-radius: 50vh;
+}
+.segundo::before{
+    content: '';
+    position: absolute;
+    width: 1.8px;
+    height: 150px;
+    background: rgb(97, 1, 25);
+    z-index: 12;
+    border-radius: 50hv;
+}
+.hora,.minuto,.segundo{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50vh;
+
+}
+.digital{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6%;
+    width: 20p;
+    margin-top: -40%;
+    font-family: monospace;
+    font-size: 2rem;
+    color: rgb(0, 0, 0);
+    
+}
